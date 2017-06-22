@@ -32,10 +32,10 @@
                 <td><?= h($post->modified) ?></td>
                 <td class="actions">
                 <?php
+                    echo($this->Html->link(__('View'), ['action' => 'view', $post->id]) . " ");
                     if($auth[$post->id])
                     {
-                       echo($this->Html->link(__('View'), ['action' => 'view', $post->id]));
-                       echo($this->Html->link(__('Edit'), ['action' => 'edit', $post->id]));
+                       echo($this->Html->link(__('Edit'), ['action' => 'edit', $post->id]) . " ");
                        echo($this->Form->postLink(__('Delete'), ['action' => 'delete', $post->id], ['confirm' => __('Are you sure you want to delete # {0}?', $post->id)])); 
                     }
 
