@@ -67,9 +67,9 @@ class CommentsController extends AppController
         $comment = $this->Comments->get($id, [
             'contain' => []
         ]);
-          if($comment["user_id"] != $this->Auth->user('id'))
+        if($comment["user_id"] != $this->Auth->user('id'))
         {
-            $this->Flash->error(__"You don't own this post"));
+            $this->Flash->error(__("You don't own this post"));
              exit();
         }
         if ($this->request->is(['patch', 'post', 'put'])) {
@@ -101,7 +101,7 @@ class CommentsController extends AppController
         ]);
         if($comment["user_id"] != $this->Auth->user('id'))
         {
-            $this->Flash->error(__"You don't own this post"));
+            $this->Flash->error(__("You don't own this post"));
              exit();
         }
         $this->request->allowMethod(['post', 'delete']);

@@ -119,7 +119,7 @@ class PostsController extends AppController
         ]);
         if($post["user_id"] != $this->Auth->user('id'))
         {
-            $this->Flash->error(__"You don't own this post"));
+            $this->Flash->error(__("You don't own this post"));
             exit();
         }
 
@@ -152,7 +152,7 @@ class PostsController extends AppController
         ]);
         if($post["user_id"] != $this->Auth->user('id'))
         {
-            $this->Flash->error(__"You don't own this post"));
+            $this->Flash->error(__("You don't own this post"));
              exit();
         }
         if ($this->Posts->delete($post)) {
